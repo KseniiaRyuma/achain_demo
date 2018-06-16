@@ -1,0 +1,15 @@
+type Storage = {num:int}
+
+var M = Contract<Storage>()
+
+function M:init()
+    self.storage.num = 0
+end
+
+function M:printmsg()
+	print('Welcome to the meeting of Achain!')
+	self.storage.num = self.storage.num + 1
+	print('We have '..tostring(self.storage.num)..' visitors now£¡')
+end
+
+return M
